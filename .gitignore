@@ -1,49 +1,122 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
+# ============================================
+#  Flutter & Dart - General
+# ============================================
 .DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
-
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
 .idea/
-
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins-dependencies
-.pub-cache/
+.packages
 .pub/
-/build/
-/coverage/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+.melos_tool/
+.melos_packages/
+.melos_workspace_state/
+build/
+out/
+coverage/
+covhtml/
+*.lock
 
-# Symbolication related
-app.*.symbols
+# ============================================
+#  Platform Specific (Android / iOS / Web)
+# ============================================
 
-# Obfuscation related
-app.*.map.json
+# Android
+local.properties
+android/.gradle/
+android/app/key.properties
+android/app/google-services.json
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# iOS
+ios/Flutter/.last_build_id
+ios/Pods/
+ios/Runner/GoogleService-Info.plist
+ios/build/
+ios/.generated/
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Generated.xcconfig
+ios/ServiceDefinitions.json
 
-assets/.env
-lib/core/config/firebase_options.dart
+# Web
+build/web/
+web/generated_plugin_registrant.dart
+
+# macOS
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/Pods/
+macos/build/
+macos/Runner/GoogleService-Info.plist
+
+# Windows
+windows/Flutter/ephemeral/
+windows/build/
+
+# Linux
+linux/flutter/ephemeral/
+linux/build/
+
+# ============================================
+#  Firebase / Environment Config
+# ============================================
+.env
+.env.*
+firebase-debug.log
 firebase.json
+firestore.indexes.json
+firestore.rules
+storage.rules
+firebase_options.dart
+
+# ============================================
+#  Build Runner / Code Generation
+# ============================================
+# Arquivos gerados automaticamente (não versionar)
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+*.gr.dart
+*.config.dart
+*.reflectable.dart
+
+# ============================================
+#  Testing / Coverage
+# ============================================
+test/.dart_tool/
+test/coverage/
+*.lcov
+*.json-report
+
+# ============================================
+#  Other Development Files
+# ============================================
+.vscode/
+*.iml
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+*.rej
+*.zip
+*.tar.gz
+*.log
+*.pid
+*.seed
+*.seed.yaml
+*.lock.json
+
+# ============================================
+# Project Specific (Cocus Notes)
+# ============================================
+# Build runner outputs
+generated/
+mock_cache/
+hive_boxes/
+firebase_cache/
+notes_backup/
+local_storage/
+assets/generated/
+temp/
+tmp/
