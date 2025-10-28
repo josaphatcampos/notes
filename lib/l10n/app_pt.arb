@@ -1,0 +1,54 @@
+{
+  "@@locale": "pt",
+  "appTitle": "Cocus Notas",
+  "notesTitle": "Minhas Notas",
+  "newNote": "Nova Nota",
+  "editNote": "Editar Nota",
+  "title": "Título",
+  "close": "Fechar",
+  "linkedNotes": "Notas vinculadas",
+  "emptyNotes": "Nenhuma nota ainda",
+  "save": "Salvar",
+  "cancel": "Cancelar",
+  "delete": "Excluir",
+  "deleteNoteQuestion": "Excluir Nota?",
+  "deleteNoteConfirm": "Tem certeza de que deseja excluir a nota \"{noteTitle}\"?",
+  "@deleteNoteConfirm": {
+    "description": "Mensagem de confirmação de exclusão da nota",
+    "placeholders": {
+      "noteTitle": {
+        "type": "String",
+        "example": "Minha nota importante"
+      }
+    }
+  },
+  "updatedAtLabel": "Atualizado em",
+  "search": "Buscar",
+  "sort": "Ordenar",
+  "sortTitleAsc": "Título (A-Z)",
+  "sortTitleDesc": "Título (Z-A)",
+  "sortCreatedAsc": "Data de criação ↑",
+  "sortCreatedDesc": "Data de criação ↓",
+  "sortUpdatedAsc": "Última edição ↑",
+  "sortUpdatedDesc": "Última edição ↓",
+  "addImage": "Adicionar Imagem",
+  "linkNotes": "Vincular Notas",
+  "markdownHint": "Conteúdo (Markdown)",
+  "noTitle": "(Sem título)",
+  "lastUpdated": "Atualizado em {date}",
+  "noteNotFound": "Nota não encontrada",
+  "backToList": "Lista",
+  "attachments": "Anexos",
+  "exportPDF": "Exportar para PDF",
+  "deleteNoteWarning": "Esta ação não pode ser desfeita.",
+  "goToNote": "Ir para a nota \"{noteTitle}\"",
+  "@goToNote": {
+    "description": "Tooltip para abrir uma nota linkada",
+    "placeholders": {
+      "noteTitle": {
+        "type": "String",
+        "example": "Minha nota"
+      }
+    }
+  }
+}

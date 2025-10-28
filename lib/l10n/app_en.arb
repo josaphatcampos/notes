@@ -1,0 +1,54 @@
+{
+  "@@locale": "en",
+  "appTitle": "Cocus Notes",
+  "notesTitle": "My Notes",
+  "newNote": "New Note",
+  "editNote": "Edit Note",
+  "title": "Title",
+  "close": "Close",
+  "linkedNotes": "Linked Notes",
+  "emptyNotes": "No notes yet",
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "deleteNoteQuestion": "Delete Note?",
+  "deleteNoteConfirm": "Are you sure you want to delete the note \"{noteTitle}\"?",
+  "@deleteNoteConfirm": {
+    "description": "Confirmation message for note deletion",
+    "placeholders": {
+      "noteTitle": {
+        "type": "String",
+        "example": "My important note"
+      }
+    }
+  },
+  "updatedAtLabel": "Updated at",
+  "search": "Search",
+  "sort": "Sort",
+  "sortTitleAsc": "Title (A-Z)",
+  "sortTitleDesc": "Title (Z-A)",
+  "sortCreatedAsc": "Creation date ↑",
+  "sortCreatedDesc": "Creation date ↓",
+  "sortUpdatedAsc": "Last edited ↑",
+  "sortUpdatedDesc": "Last edited ↓",
+  "addImage": "Add Image",
+  "linkNotes": "Link Notes",
+  "markdownHint": "Content (Markdown)",
+  "noTitle": "(Untitled)",
+  "lastUpdated": "Last updated on {date}",
+  "noteNotFound": "Note not found",
+  "backToList": "List",
+  "attachments": "Attachments",
+  "exportPDF": "Export to PDF",
+  "deleteNoteWarning": "This action cannot be undone.",
+  "goToNote": "Go to note \"{noteTitle}\"",
+  "@goToNote": {
+    "description": "Tooltip to open a linked note",
+    "placeholders": {
+      "noteTitle": {
+        "type": "String",
+        "example": "My note"
+      }
+    }
+  }
+}
