@@ -1,29 +1,29 @@
 {
   "@@locale": "pt",
   "appTitle": "Cocus Notas",
-  "notesTitle": "Minhas Notas",
+  "notesTitle": "As Minhas Notas",
   "newNote": "Nova Nota",
   "editNote": "Editar Nota",
   "title": "Título",
   "close": "Fechar",
-  "linkedNotes": "Notas vinculadas",
-  "emptyNotes": "Nenhuma nota ainda",
-  "save": "Salvar",
+  "linkedNotes": "Notas associadas",
+  "emptyNotes": "Ainda não há notas",
+  "save": "Guardar",
   "cancel": "Cancelar",
-  "delete": "Excluir",
-  "deleteNoteQuestion": "Excluir Nota?",
-  "deleteNoteConfirm": "Tem certeza de que deseja excluir a nota \"{noteTitle}\"?",
+  "delete": "Eliminar",
+  "deleteNoteQuestion": "Eliminar Nota?",
+  "deleteNoteConfirm": "Tem a certeza de que pretende eliminar a nota \"{noteTitle}\"?",
   "@deleteNoteConfirm": {
-    "description": "Mensagem de confirmação de exclusão da nota",
+    "description": "Mensagem de confirmação para eliminar a nota",
     "placeholders": {
       "noteTitle": {
         "type": "String",
-        "example": "Minha nota importante"
+        "example": "A minha nota importante"
       }
     }
   },
   "updatedAtLabel": "Atualizado em",
-  "search": "Buscar",
+  "search": "Procurar",
   "sort": "Ordenar",
   "sortTitleAsc": "Título (A-Z)",
   "sortTitleDesc": "Título (Z-A)",
@@ -32,7 +32,7 @@
   "sortUpdatedAsc": "Última edição ↑",
   "sortUpdatedDesc": "Última edição ↓",
   "addImage": "Adicionar Imagem",
-  "linkNotes": "Vincular Notas",
+  "linkNotes": "Associar Notas",
   "markdownHint": "Conteúdo (Markdown)",
   "noTitle": "(Sem título)",
   "lastUpdated": "Atualizado em {date}",
@@ -40,14 +40,14 @@
   "backToList": "Lista",
   "attachments": "Anexos",
   "exportPDF": "Exportar para PDF",
-  "deleteNoteWarning": "Esta ação não pode ser desfeita.",
+  "deleteNoteWarning": "Esta ação não pode ser anulada.",
   "goToNote": "Ir para a nota \"{noteTitle}\"",
   "@goToNote": {
-    "description": "Tooltip para abrir uma nota linkada",
+    "description": "Texto de ajuda (tooltip) para abrir uma nota associada",
     "placeholders": {
       "noteTitle": {
         "type": "String",
-        "example": "Minha nota"
+        "example": "A minha nota"
       }
     }
   }

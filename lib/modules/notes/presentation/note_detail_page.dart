@@ -6,7 +6,6 @@ import 'package:cocus/modules/notes/domain/entities/note.dart';
 import 'package:cocus/modules/notes/presentation/components/error_image.dart';
 import 'package:cocus/modules/notes/presentation/providers/notes_provider.dart';
 import 'package:cocus/modules/notes/presentation/widgets/enlarged_image.dart';
-import 'package:cocus/shared/design_system/theme/ds_colors.dart';
 import 'package:cocus/shared/utils/note_pdf_exporter.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -67,7 +66,7 @@ class NoteDetailPage extends StatelessWidget {
             leadingWidth: isLargeScreen ? 160 : null,
             title: Text(
               note.title.isEmpty ? loc.noTitle : note.title,
-              style: typo.titleLarge.copyWith(color: DSColors.white),
+              style: typo.titleLarge.copyWith(color: color.onSecondary),
               overflow: TextOverflow.ellipsis,
             ),
             actions: [

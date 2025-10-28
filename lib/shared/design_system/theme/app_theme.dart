@@ -14,7 +14,7 @@ class AppTheme {
       primary: DSColors.navy,
       onPrimary: DSColors.white,
       secondary: DSColors.orange,
-      onSecondary: DSColors.white,
+      onSecondary: DSColors.navy,
       error: DSColors.pink,
       onError: DSColors.white,
       background: DSColors.backgroundLight,

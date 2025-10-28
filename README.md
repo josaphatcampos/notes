@@ -184,6 +184,6 @@ Main technologies used (see `pubspec.yaml`):
 ## 🧑‍💻 Author
 
 **Josaphat Campos (Jo Campos)**
-📍 Flutter / Mobile Developer
+📍 Mobile Developer
 🎸 Heavy Metal Guitarist & Creative Technologist
 🔗 [github.com/josaphat-campos](https://github.com/josaphat-campos)

@@ -12,7 +12,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get appTitle => 'Cocus Notas';
 
   @override
-  String get notesTitle => 'Minhas Notas';
+  String get notesTitle => 'As Minhas Notas';
 
   @override
   String get newNote => 'Nova Nota';
@@ -27,33 +27,33 @@ class AppLocalizationsPt extends AppLocalizations {
   String get close => 'Fechar';
 
   @override
-  String get linkedNotes => 'Notas vinculadas';
+  String get linkedNotes => 'Notas associadas';
 
   @override
-  String get emptyNotes => 'Nenhuma nota ainda';
+  String get emptyNotes => 'Ainda não há notas';
 
   @override
-  String get save => 'Salvar';
+  String get save => 'Guardar';
 
   @override
   String get cancel => 'Cancelar';
 
   @override
-  String get delete => 'Excluir';
+  String get delete => 'Eliminar';
 
   @override
-  String get deleteNoteQuestion => 'Excluir Nota?';
+  String get deleteNoteQuestion => 'Eliminar Nota?';
 
   @override
   String deleteNoteConfirm(String noteTitle) {
-    return 'Tem certeza de que deseja excluir a nota \"$noteTitle\"?';
+    return 'Tem a certeza de que pretende eliminar a nota \"$noteTitle\"?';
   }
 
   @override
   String get updatedAtLabel => 'Atualizado em';
 
   @override
-  String get search => 'Buscar';
+  String get search => 'Procurar';
 
   @override
   String get sort => 'Ordenar';
@@ -80,7 +80,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get addImage => 'Adicionar Imagem';
 
   @override
-  String get linkNotes => 'Vincular Notas';
+  String get linkNotes => 'Associar Notas';
 
   @override
   String get markdownHint => 'Conteúdo (Markdown)';
@@ -106,7 +106,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get exportPDF => 'Exportar para PDF';
 
   @override
-  String get deleteNoteWarning => 'Esta ação não pode ser desfeita.';
+  String get deleteNoteWarning => 'Esta ação não pode ser anulada.';
 
   @override
   String goToNote(String noteTitle) {
