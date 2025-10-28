@@ -1,85 +1,140 @@
-# Cocus Notes
+# 🗒️ Cocus Notes
 
-Cocus Notes is a cross-platform note-taking application (Web, Android, iOS) built with Flutter.
-The project was developed as a technical challenge, demonstrating a robust architecture, **Clean
-Architecture** principles, and a custom **Design System** for a consistent and modern user
-experience.
+**Cocus Notes** is a cross-platform note-taking application (**Web**, **Android**, **iOS**) built
+with **Flutter**.
+The project was developed as a **technical challenge**, demonstrating a **production-ready**
+codebase with:
+
+* ✅ **Clean Architecture**
+* 🎨 **Custom Design System**
+* 🧩 **Modular structure**
+* 🧪 **Comprehensive automated testing**
+
+This ensures a scalable, maintainable, and consistent user experience across all platforms.
+
+---
 
 ## ✨ Main Features
 
 * **Complete Note Management:** Create, edit, view, and delete notes with Markdown formatting
   support.
-* **Advanced Organization:** Link notes together to create a connected knowledge base.
-* **Search and Sorting:** Easily find notes with full-text search and sort the list by title or
-  date.
-* **Attachment Support:** Add images to your notes (with thumbnail support).
+* **Advanced Organization:** Link notes together to build a connected knowledge base.
+* **Search and Sorting:** Quickly find notes with full-text search and sort by title or date.
+* **Attachment Support:** Add images or files to your notes with thumbnail previews.
 * **PDF Export:** Export any note to a PDF file with a single click.
-* **Multi-language:** Supports Portuguese and English, with easy expansion to other languages.
-* **Responsive Design:** Interface optimized for large screens (web/desktop) and small screens (
-  mobile).
-* **Local Persistence:** All notes are saved locally using Hive for fast and secure offline access.
+* **Multi-language:** Supports **Portuguese** 🇵🇹 and **English** 🇺🇸, easily extendable to other
+  languages.
+* **Responsive Design:** Optimized layouts for **web/desktop** and **mobile** screens.
+* **Local Persistence:** Notes are securely stored offline using **Hive**.
+
+---
 
 ## 🏛️ Architecture and Project Structure
 
-The project follows **Clean Architecture** principles, separating the code into three main layers to
-ensure decoupling, testability, and maintainability:
+The project strictly follows **Clean Architecture**, organizing the code into three layers for clear
+separation of concerns:
 
-* **Domain:** Contains pure business logic (entities and use cases), without dependencies on
-  external frameworks.
-* **Data:** Implements data access logic (repositories and data sources), responsible for
-  communicating with the local database (Hive) and future APIs.
-* **Presentation (UI):** Responsible for displaying the user interface, built with Flutter and using
-  the **Provider** state management pattern.
+### 🧠 Domain Layer
 
-### Design System (DS)
+*Contains pure business logic.*
+Includes:
 
-The project includes a custom **Design System** (`/shared/design_system`) that centralizes all
-visual definitions, such as:
+* **Entities** (`Note`, `NoteAttachment`)
+* **Use Cases** (`AddNote`, `DeleteNote`, `LinkNote`, `SyncNotes`, etc.)
 
-* **Colors (`DSColors`)**
-* **Typography (`DSTypography`)**
-* **Spacing (`DSSpacing`)**
-* **Sizes (`DSSizes`)**
+### 💾 Data Layer
 
-This ensures visual consistency throughout the entire application and makes future theme changes
-easier.
+*Implements data access and persistence.*
+Responsible for communicating with:
+
+* **Local storage:** Hive
+* **Cloud APIs (Firebase):** Firestore, Storage, Auth
+
+### 🎨 Presentation Layer
+
+*Handles UI and user interaction.*
+
+* Built with **Flutter**
+* Uses the **Provider** state management pattern
+* Implements a modular and responsive design
+
+---
+
+## 🎨 Design System (DS)
+
+A fully custom **Design System** located in `/shared/design_system`, defining:
+
+* **Colors** → `DSColors`
+* **Typography** → `DSTypography`
+* **Spacing** → `DSSpacing`
+* **Sizes** → `DSSizes`
+* **Reusable components** → `DSButton`, `DSChip`, `DSIconButton`, `DSDialog`, etc.
+
+This guarantees a consistent visual identity and makes theming or future rebranding effortless.
+
+---
+
+## 🧪 Testing
+
+Cocus Notes includes a **complete suite of unit tests** covering all use cases:
+
+| Layer        | Coverage                                                                                         |
+|--------------|--------------------------------------------------------------------------------------------------|
+| Domain       | ✅ Entities & Use Cases (`AddNote`, `UpdateNote`, `DeleteNote`, `SearchNotes`, `SyncNotes`, etc.) |
+| Data         | ✅ Repository mocks and behavior verification                                                     |
+| Presentation | ⚙️ Ready for widget/integration tests                                                            |
+
+Tests are written with:
+
+* [`flutter_test`](https://api.flutter.dev/flutter/flutter_test/flutter_test-library.html)
+* [`mockito`](https://pub.dev/packages/mockito) for mocking dependencies
+* [`build_runner`](https://pub.dev/packages/build_runner) for mock generation
+
+**Run all tests:**
+
+```bash
+flutter test
+```
+
+**Regenerate mocks:**
+
+```bash
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+---
 
 ## 🛠️ Technologies and Dependencies
 
-The `pubspec.yaml` file reveals the main technologies used:
+Main technologies used (see `pubspec.yaml`):
 
 * **Framework:** [Flutter](https://flutter.dev/)
 * **State Management:** [Provider](https://pub.dev/packages/provider)
-* **Navigation:** [go_router](https://pub.dev/packages/go_router) for declarative, URL-based
-  navigation.
-* **Backend & Cloud (Firebase):**
+* **Navigation:** [go_router](https://pub.dev/packages/go_router)
+* **Database:** [Hive](https://pub.dev/packages/hive)
+* **Cloud (Firebase):**
 
-    * `firebase_core`: General configuration.
-    * `firebase_auth`: User authentication.
-    * `cloud_firestore`: NoSQL database for note synchronization.
-    * `firebase_storage`: Attachment (image) storage.
-* **Local Database:** [Hive](https://pub.dev/packages/hive) for performant data persistence.
+    * `firebase_core`
+    * `firebase_auth`
+    * `cloud_firestore`
+    * `firebase_storage`
 * **Internationalization (i18n):
-  ** [flutter_localization](https://pub.dev/packages/flutter_localization) and `intl` for
-  multi-language support.
-* **Markdown and PDF:** [markdown_widget](https://pub.dev/packages/markdown_widget) for rendering
-  and [pdf](https://pub.dev/packages/pdf) for exporting.
-* **Utilities:** `uuid` for ID generation, `path_provider` for file system access, among others.
+  ** [flutter_localizations](https://pub.dev/packages/flutter_localizations), `intl`
+* **Markdown & PDF:
+  ** [markdown_widget](https://pub.dev/packages/markdown_widget), [pdf](https://pub.dev/packages/pdf)
+* **Linting & Analysis:** `flutter_lints`, `very_good_analysis`
+* **Code Generation:** `build_runner`, `hive_generator`
 
-For the development environment, the following tools were used:
-
-* **Linting:** `flutter_lints` and `very_good_analysis` to ensure code quality and consistency.
-* **Code Generation:** `build_runner` and `hive_generator`.
+---
 
 ## 🚀 How to Run the Project
 
-**Prerequisites:**
+### **Prerequisites**
 
-* Have the [Flutter SDK](https://flutter.dev/docs/get-started/install) installed (version `^3.9.2`
-  or higher).
-* Use a code editor such as VS Code or Android Studio.
+* [Flutter SDK](https://flutter.dev/docs/get-started/install) `^3.9.2` or higher
+* A compatible IDE (VS Code / Android Studio)
 
-**Steps:**
+### **Steps**
 
 1. **Clone the repository:**
 
@@ -87,14 +142,48 @@ For the development environment, the following tools were used:
    git clone https://github.com/josaphat-campos/cocus.git
    cd cocus
    ```
+
 2. **Install dependencies:**
 
    ```bash
    flutter pub get
    ```
+
 3. **Run code generation and localization:**
 
    ```bash
-   dart run build_runner build --delete-conflicting-outputs
+   flutter pub run build_runner build --delete-conflicting-outputs
    flutter gen-l10n
    ```
+
+4. **Run the app:**
+
+   ```bash
+   flutter run -d chrome
+   ```
+
+5. **Build for Web (release):**
+
+   ```bash
+   flutter build web
+   ```
+
+---
+
+## 🧱 Project Highlights
+
+* **Clean Architecture** for maintainable, testable code
+* **Design System** ensuring UI consistency
+* **Full unit test coverage** across use cases
+* **Firebase-ready** for syncing and cloud storage
+* **Localization-ready** (`en` / `pt`)
+* **Responsive Web-first design**
+
+---
+
+## 🧑‍💻 Author
+
+**Josaphat Campos (Jo Campos)**
+📍 Flutter / Mobile Developer
+🎸 Heavy Metal Guitarist & Creative Technologist
+🔗 [github.com/josaphat-campos](https://github.com/josaphat-campos)
